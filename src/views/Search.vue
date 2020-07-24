@@ -135,6 +135,21 @@
   .searchButton {
     grid-area: searchButton;
   }
+
+  @media only screen and (max-width: 700px) {
+    .search-area {
+      grid-template-columns: auto minmax(5rem, 20rem) auto;
+      grid-template-rows: 0 auto;
+      grid-template-areas:
+      ". . ."
+      ". searchMain ."
+      ". field1 ."
+      ". searchButton .";
+    }
+    .results {
+      grid-template-columns: repeat(3, 8rem);
+    }
+  }
 </style>
 
 <script>
